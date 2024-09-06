@@ -1,0 +1,15 @@
+artifact_uri: file:///home/leson207/VSCode_project/Kidney/mlruns/0/7ccb9cb961674f23b6198adbf08412ba/artifacts
+end_time: 1725631294359
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7ccb9cb961674f23b6198adbf08412ba
+run_name: burly-owl-897
+run_uuid: 7ccb9cb961674f23b6198adbf08412ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725631291248
+status: 3
+tags: []
+user_id: leson207
