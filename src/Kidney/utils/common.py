@@ -9,7 +9,7 @@ from box import ConfigBox
 from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 
-from src.Kidney import logger
+from Kidney import logger
 
 
 @ensure_annotations
@@ -34,7 +34,7 @@ def create_directories(paths: list, verbose=True):
 @ensure_annotations
 def save_json(path: Path, data: dict):
     with open(path, 'w') as file:
-        json.dump(data, f, indent=4)
+        json.dump(data, file, indent=4)
     
     logger.info(f'Json file saved at: {path}')
 

@@ -2,6 +2,7 @@ from Kidney import logger
 from Kidney.pipeline.stage_1 import DataIngestionTrainingPipeline
 from Kidney.pipeline.stage_2_prepare_base_model import PrepareBaseModelTrainingPipeline
 from Kidney.pipeline.stage_3_model_training import ModeltrainingPipeline
+from Kidney.pipeline.stage_4_evaluation import EvaluationPipeline
 
 # STAGE_NAME = 'Data Ingestion Stage'
 
@@ -32,16 +33,32 @@ from Kidney.pipeline.stage_3_model_training import ModeltrainingPipeline
 
 # AUTOTUNE/ PREFETCH
 # parallel training
+# dagshub URI
+# call back
+# custome model
 
-STAGE_NAME = 'MODEL TRAINING'
+# STAGE_NAME = 'MODEL TRAINING'
 
-if __name__=='__main__':
+# if __name__=='__main__':
+#     try:
+#         logger.info(f'***************')
+#         logger.info(f'>>>>>>>> Stage {STAGE_NAME} started <<<<<')
+#         obj = ModeltrainingPipeline()
+#         obj.main()
+#         logger.info(f'>>>>>>> Stage {STAGE_NAME} completed <<<<')
+#     except Exception as e:
+#         logger.exception(e)
+#         raise e
+
+STAGE_NAME = 'MODEL EVALUATION'
+
+if __name__ == '__main__':
     try:
-        logger.info(f'***************')
-        logger.info(f'>>>>>>>> Stage {STAGE_NAME} started <<<<<')
-        obj = ModeltrainingPipeline()
+        logger.info(f'****************')
+        logger.info(f'>>>>>>>> stage {STAGE_NAME} started <<<<<<')
+        obj = EvaluationPipeline()
         obj.main()
-        logger.info(f'>>>>>>> Stage {STAGE_NAME} completed <<<<')
+        logger.info(f'>>>>>>> stage {STAGE_NAME} completed <<<<')
     except Exception as e:
         logger.exception(e)
         raise e
